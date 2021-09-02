@@ -15,8 +15,8 @@ class FlutterPushBadge {
   }
 
   /// 获取角标
-  static Future<String> get badgeNumber async {
-    final String version = await _channel.invokeMethod('getBadgeNumber');
+  static Future<String?> get badgeNumber async {
+    final String? version = await _channel.invokeMethod('getBadgeNumber');
     return version;
   }
 }

@@ -12,7 +12,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  String _badgeNumber = 'Unknown';
+  String? _badgeNumber = 'Unknown';
 
   @override
   void initState() {
@@ -22,7 +22,7 @@ class _MyAppState extends State<MyApp> {
 
   // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> initPlatformState() async {
-    String badgeNumber;
+    String? badgeNumber;
     // Platform messages may fail, so we use a try/catch PlatformException.
     try {
       badgeNumber = await FlutterPushBadge.badgeNumber;
